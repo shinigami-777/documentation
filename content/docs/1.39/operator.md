@@ -98,7 +98,7 @@ The instructions from the previous section also work for installing the operator
 oc login -u <privileged user>
 
 oc new-project observability # <1>
-oc create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v{{< currentVersion >}}.0/jaeger-operator.yaml -n observability # <2>
+oc create -f https://github.com/jaegertracing/jaeger-operator/releases/download/v{{< currentVersion >}}/jaeger-operator.yaml -n observability # <2>
 ```
 <1> This creates the namespace used by default in the deployment files. If you want to install the Jaeger operator in a different namespace, you must edit the deployment files to change `observability` to the desired namespace value.
 
@@ -1383,5 +1383,5 @@ The Jaeger Operator does not yet publish its own metrics. Rather, it makes avail
 To uninstall the operator, run the following commands:
 
 ```bash
-kubectl delete -n observability -f https://github.com/jaegertracing/jaeger-operator/releases/download/v{{< currentVersion >}}.0/jaeger-operator.yaml
+kubectl delete -n observability -f https://github.com/jaegertracing/jaeger-operator/releases/download/v{{< currentVersion >}}/jaeger-operator.yaml
 ```
